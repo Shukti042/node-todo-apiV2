@@ -5,7 +5,7 @@ console.log('--------MongoDB URI---------');
 console.log(process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }).
 catch((e) => {
-    res.status(400).send(e);
+    console.log(e);
 });
 
 // const conn = mongoose.connection;
