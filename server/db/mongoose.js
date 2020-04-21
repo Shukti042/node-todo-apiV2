@@ -4,7 +4,9 @@ mongoose.Promise = global.Promise;
 console.log('--------MongoDB URI---------');
 console.log(process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }).
-catch(error => handleError(error));
+catch((e) => {
+    res.status(400).send(e);
+});
 
 // const conn = mongoose.connection;
 // mongoose.connection.once('open', () => { console.log('MongoDB Connected'); });
