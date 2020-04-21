@@ -10,9 +10,9 @@ var password = '123abc!';
 //   });
 // });
 
-var hashedPassword = '$2a$10$0QPlO1vMIosz7N72xu1BNOW5LBGVErLbukW9ShqaUAKbVmYOE3KTW';
+var hashedPassword = '$2a$10$huAU4qTnQuGPifHEXfV9cOmPJ7p61oKaoXrY1WviiDAznE/rW8oLK';
 
-bcrypt.compare('123abc!', hashedPassword, (err, res) => {
+bcrypt.compare('123!', hashedPassword, (err, res) => {
   console.log(res);
 });
 
